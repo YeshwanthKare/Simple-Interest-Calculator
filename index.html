@@ -1,34 +1,56 @@
+<!DOCTYPE html>
 <html>
   <head>
     <link rel="stylesheet" href="style.css" />
     <title>Simple Interest</title>
   </head>
   <body>
-    <h1>Simple Interest Calculator</h1>
+    <div class="app">
+      <h1>Simple Interest Calculator</h1>
+      <div class="app-main">
+        <label for="principle"
+          >Amount
+          <input type="number" id="principle" />
+        </label>
 
-    Amount <input type="number" id="principal" /> <br />
-    Rate
-    <input type="range" value="0.1" id="rate" min="0.1" max="1000" />
-    <output id="rate-span"></output> <br />
-    No. of Years
-    <select name="years" id="years" onchange="selectYears(this.value)">
-      <option value="1">1</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-      <option value="5">5</option>
-      <option value="6">6</option>
-      <option value="7">7</option>
-      <option value="8">8</option>
-      <option value="9">9</option>
-      <option value="10">10</option>
-    </select>
-    <br />
-    Interest : <span id="result"></span><br />
+        <br />
+        <label for="rate"
+          >Rate
+          <input
+            type="range"
+            value="0.1"
+            id="rate"
+            min="0.1"
+            max="1000"
+            oninput="getRate()"
+          />
+          <span id="rate-span">0</span><span>%</span>
+        </label>
+        <br />
+        <label for="years"
+          >No. of Years
+          <select name="years" id="years">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+          </select>
+        </label>
 
-    <button onclick="compute()">Compute</button>
+        <br />
 
-    <p class="output"></p>
+        <button onclick="computeSimpleInterest()">Compute Interest</button>
+
+        <p class="output"></p>
+      </div>
+    </div>
+
     <script src="script.js"></script>
   </body>
 </html>

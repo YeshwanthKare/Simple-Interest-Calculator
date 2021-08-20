@@ -1,14 +1,74 @@
 @import url("https://fonts.googleapis.com/css2?family=Prompt:wght@400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
 body {
-  padding-top: 30px;
-  text-align: center;
+  box-sizing: border-box;
+  padding: 0;
+  background-image: url(https://cdn.iahorro.com/storage/blog/2018/04/prestamos_a_tipo_de_interes_fijo_o_variable/prestamos_a_tipo_de_interes_fijo_o_variable.JPG);
+  background-size: cover;
 }
+
+.app {
+  margin: 80px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 500px;
+  padding: 30px 0 30px 0;
+  /* background-color: aquamarine; */
+  /* border: 1px solid rgba(137, 145, 137, 0.49); */
+  border-radius: 60px;
+  box-shadow: 0px 2px 5px 0 rgba(137, 145, 137, 0.79);
+}
+
 h1 {
-  /* color: green; */
+  color: aliceblue;
   font-family: "Prompt", sans-serif;
 }
 
+p,
+label {
+  font-family: "Roboto", sans-serif;
+  color: aliceblue;
+}
+
 input {
-  margin: 10px 0 10px 0;
+  margin: 10px 0 10px 80px;
+}
+
+select {
+  margin-left: 53px;
+}
+
+button {
+  margin-top: 20px;
+  font-size: 16px;
+  padding: 10px 20px;
+  border-radius: 16px;
+  border: none;
+  background-color: #0099e5;
+  color: white;
+  font-family: "Roboto", sans-serif;
+}
+
+button:focus {
+  outline: none;
+}
+
+button:hover {
+  background-color: #0f85c0;
+  cursor: pointer;
+}
+
+#rate {
+  margin-left: 100px;
+}
+
+#years {
+  margin-top: 10px;
+}
+
+.output {
+  line-height: 1.4em;
 }
