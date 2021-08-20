@@ -1,6 +1,6 @@
 const getRate = () => {
   let span = document.getElementById("rate-span");
-  let rateValue = rate.value * 0.1 + 0.1;
+  let rateValue = rate.value * 0.1;
   let finalRate = rateValue.toFixed(1);
   span.innerHTML = finalRate;
 
