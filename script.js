@@ -54,9 +54,19 @@ const showResult = (p, t, r, I) => {
     ".";
 
   if (p === null || p <= 0) {
+    preventDefault();
     alert("Enter Positive Pricipal Amount");
     output.innerHTML = "";
   } else {
+    preventDefault();
     output.innerHTML = output.textContent;
   }
+};
+
+const preventDefault = () => {
+  let form = document.querySelector("#form");
+
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+  });
 };
