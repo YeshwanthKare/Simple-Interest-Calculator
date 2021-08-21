@@ -8,44 +8,48 @@
     <div class="app">
       <h1>Simple Interest Calculator</h1>
       <div class="app-main">
-        <label for="principle"
-          >Amount
-          <input type="number" id="principle" />
-        </label>
+        <form>
+          <label for="principle"
+            >Amount
+            <input type="number" id="principle" required min="1" />
+          </label>
 
-        <br />
-        <label for="rate"
-          >Rate
-          <input
-            type="range"
-            value="1"
-            id="rate"
-            min="1"
-            max="1000"
-            oninput="getRate()"
-          />
-          <span id="rate-span">1</span><span>%</span>
-        </label>
-        <br />
-        <label for="years"
-          >No. of Years
-          <select name="years" id="years">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-            <option value="7">7</option>
-            <option value="8">8</option>
-            <option value="9">9</option>
-            <option value="10">10</option>
-          </select>
-        </label>
+          <br />
+          <label for="rate"
+            >Rate
+            <input
+              type="range"
+              value="1"
+              id="rate"
+              min="1"
+              max="1000"
+              oninput="getRate()"
+            />
+            <span id="rate-span">1</span><span>%</span>
+          </label>
+          <br />
+          <label for="years"
+            >No. of Years
+            <select name="years" id="years">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+            </select>
+          </label>
 
-        <br />
+          <br />
 
-        <button onclick="computeSimpleInterest()">Compute Interest</button>
+          <button type="submit" onclick="computeSimpleInterest()">
+            Compute Interest
+          </button>
+        </form>
 
         <p class="output"></p>
       </div>

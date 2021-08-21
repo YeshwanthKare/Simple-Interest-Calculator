@@ -34,16 +34,29 @@ const showResult = (p, t, r, I) => {
 
   output.textContent =
     "If you deposit " +
+    "<span style='background-color: yellow; color:grey;'>" +
     p +
+    "</span>" +
     ",<br>" +
     "at an interest rate of " +
+    "<span style='background-color: yellow; color: grey;'>" +
     r +
+    "</span>" +
     " %,<br> " +
     "You will receive an Amount of " +
+    "<span style='background-color: yellow;color: grey;'>" +
     I +
+    "</span>" +
     ",<br> in the Year 202" +
+    "<span style='background-color: yellow;color:grey;'>" +
     t +
+    "</span>" +
     ".";
 
-  output.innerHTML = output.textContent;
+  if (p === null || p <= 0) {
+    alert("Enter Positive Pricipal Amount");
+    output.innerHTML = "";
+  } else {
+    output.innerHTML = output.textContent;
+  }
 };
